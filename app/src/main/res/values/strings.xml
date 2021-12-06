@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">foodDonationApp</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="login">Login</string>
+    <string name="ngo">NGO</string>
+    <string name="donor">DONOR</string>
+    <string name="volunteer">VOLUNTEER</string>
+    <string name="welcome">WELCOME</string>
+
+
+
+    <string name="create_new">Not Registered! Click here to Register</string>
+</resources>
