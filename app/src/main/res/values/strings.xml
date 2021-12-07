@@ -7,6 +7,12 @@
     <string name="donor">DONOR</string>
     <string name="volunteer">VOLUNTEER</string>
     <string name="welcome">WELCOME</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="adress">Adress</string>
+    <string name="upload_doc">Upload document</string>
+    <string name="register">Register</string>
+    <string name="not_register">Already Registered?</string>
 
 
 

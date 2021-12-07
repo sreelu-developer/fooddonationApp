@@ -21,7 +21,7 @@
             android:layout_margin="20dp"/>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardLogin"
+            android:id="@+id/cardDonor"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -51,7 +51,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardRegister"
+            android:id="@+id/cardVolunteer"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -81,7 +81,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardAboutus"
+            android:id="@+id/cardNgo"
             android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="180dp"
