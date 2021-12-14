@@ -13,7 +13,12 @@
     <string name="upload_doc">Upload document</string>
     <string name="register">Register</string>
     <string name="not_register">Already Registered?</string>
-
-
+    <string name="request">Create Food Request</string>
+    <string name="view_Status">Status</string>
     <string name="create_new">Not Registered! Click here to Register</string>
+    <string-array name="user_array">
+        <item>NGO</item>
+        <item>DONOR</item>
+        <item>VOLUNTEER</item>
+    </string-array>
 </resources>
