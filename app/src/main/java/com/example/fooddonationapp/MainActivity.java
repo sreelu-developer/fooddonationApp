@@ -6,12 +6,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,7 +25,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class MainActivity extends AppCompatActivity  {
     TextView mRegisterBtn;
     EditText email;
     EditText password;
@@ -48,15 +48,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         fAuth=FirebaseAuth.getInstance();
         fStore=FirebaseFirestore.getInstance();
 
-        Spinner spinner = (Spinner) findViewById(R.id.userspinner);
-        spinner.setOnItemSelectedListener(this);
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.user_array, android.R.layout.simple_spinner_item);
-         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
                             userID = fAuth.getCurrentUser().getUid();
+                            Log.d("value of x is ", String.valueOf(userID));
 
                             DocumentReference reference;
                             reference=fStore.collection("users").document(userID);
@@ -101,22 +94,44 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                         @Override
                                         public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                             DocumentSnapshot document = task.getResult();
-                                            userType = document.getString("usertype");
+                                             userType = document.getString("usertype");
+                                            Log.d("value of utype is ", String.valueOf(userType));
 
 
                                         }
                                     });
 
-                                 if(userType.equals("NGO"))
+                                 if("NGO".equals(userType))
                                   {
                                      Toast.makeText(MainActivity.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
                                      Intent intent = new Intent(MainActivity.this, NgoHomeActivity.class);
                                      intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                      startActivity(intent); }
+                            else if("DONOR".equals(userType))
+                            {
+                                Toast.makeText(MainActivity.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, UserlistActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent);
+                            }
+
+                            else if("VOLUNTEER".equals(userType))
+                            {
+                                Toast.makeText(MainActivity.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(MainActivity.this, UserlistActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                                startActivity(intent); }
+                            else
+                                {
+                                     Toast.makeText(MainActivity.this, "Error!.", Toast.LENGTH_SHORT).show();
+                                }
 
 
-                       }
-                        else{
+
+
+                        }
+                        else
+                            {
                             Toast.makeText(MainActivity.this, "Error! " + task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -140,13 +155,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     }
-    public void onItemSelected(AdapterView<?> parent, View view,
-                               int pos, long id) {
-        userType = parent.getItemAtPosition(pos).toString();
-        Toast.makeText(parent.getContext(), "Selected: " + userType, Toast.LENGTH_LONG).show();
-    }
 
-    public void onNothingSelected(AdapterView<?> parent) {
-        // Another interface callback
-    }
 }

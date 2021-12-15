@@ -21,15 +21,7 @@
       tools:ignore="UselessParent">
 
 
-      <!--Spinner widget-->
-      <Spinner
-          android:id="@+id/userspinner"
-          android:layout_height="50dp"
-          android:layout_width="160dp"
-          android:layout_marginEnd="10dp"
-          android:layout_marginStart="10dp"
-          android:layout_marginBottom="10dp"
-          android:layout_marginTop="10dp" />
+
 
 
     <com.google.android.material.textfield.TextInputLayout
