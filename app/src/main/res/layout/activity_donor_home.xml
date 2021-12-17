@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="135dp"
-                android:text="@string/view_Ngo_Requests"
+                android:text="view_Ngo_Requests"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_gravity="center_horizontal"
 
                 android:layout_marginTop="135dp"
-                android:text="@string/Donate_Food"
+                android:text="Donate_Food"
                 android:textColor="@color/white"
                 android:textSize="18sp" />
 

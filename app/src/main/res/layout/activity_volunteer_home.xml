@@ -41,7 +41,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/view_Donor_Requests"
+                android:text="view_Donor_Requests"
 
                 android:textSize="18sp"
                 android:textColor="@color/white"
@@ -71,7 +71,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/view_Ngo_Requests"
+                android:text="view_Ngo_Requests"
                 android:textSize="18sp"
                 android:textColor="@color/white"
                 android:layout_marginTop="135dp"

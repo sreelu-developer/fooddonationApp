@@ -1,6 +1,7 @@
 package com.example.fooddonationapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class FoodDetailAdapter  extends RecyclerView.Adapter<FoodDetailAdapter.ViewHolder>{
+public class FoodDetailAdapter  extends RecyclerView.Adapter<FoodDetailAdapter.ViewHolder> {
 
 
     // creating variables for our ArrayList and context
@@ -35,7 +36,7 @@ public class FoodDetailAdapter  extends RecyclerView.Adapter<FoodDetailAdapter.V
             // initializing our text views.
             foodName= itemView.findViewById(R.id.idfooditem);
             foodDuration = itemView.findViewById(R.id.idtimeDuration);
-            foodPacket = itemView.findViewById(R.id.Food_Packets);
+            foodPacket = itemView.findViewById(R.id.Food_Packet);
             fooddate=itemView.findViewById(R.id.Food_date);
         }
     }
@@ -49,8 +50,9 @@ public class FoodDetailAdapter  extends RecyclerView.Adapter<FoodDetailAdapter.V
         // setting data to our text views from our modal class.
         FoodDetails foods = foodArrayList.get(position);
         holder.foodName.setText(foods.getFoodItem());
-        holder.fooddate.setText(foods.getTimeDuration());
-        //holder.foodPacket.setText(foods.getNoPackets());
+        holder.fooddate.setText(foods.getDatelimit());
+
+        holder.foodPacket.setText(foods.getNoPackets()+" Packets");
         holder.foodDuration.setText(foods.getTimeDuration());
 
     }

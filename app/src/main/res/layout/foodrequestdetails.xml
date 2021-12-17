@@ -16,7 +16,7 @@
         android:orientation="vertical"
         android:padding="4dp">
 
-        <!--Textview for displaying our Course Name-->
+
         <TextView
             android:id="@+id/idfooditem"
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <!--Textview for displaying our Course Duration-->
+
         <TextView
             android:id="@+id/idtimeDuration"
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
             android:text="Time"
             android:textColor="@color/black" />
 
-        <!--Textview for displaying our Course Description-->
+
         <TextView
             android:id="@+id/Food_Packet"
             android:layout_width="match_parent"
@@ -44,6 +44,7 @@
             android:padding="2dp"
             android:text="Packets"
             android:textColor="@color/black" />
+
         <TextView
             android:id="@+id/Food_date"
             android:layout_width="match_parent"

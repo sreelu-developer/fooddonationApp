@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -28,10 +29,15 @@ public class ViewFoodRequest extends AppCompatActivity {
     private FoodDetailAdapter foodDetailAdapter;
     private FirebaseFirestore db;
     ProgressBar loadingPB;
+    FirebaseAuth fAuth;
+    String userID;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_food_request);
+
+        fAuth = FirebaseAuth.getInstance();
+        userID = fAuth.getCurrentUser().getUid();
 
         // initializing our variables.
         FoodRV = findViewById(R.id.FoodDetail);
@@ -55,7 +61,9 @@ public class ViewFoodRequest extends AppCompatActivity {
         // below line is use to get the data from Firebase Firestore.
         // previously we were saving data on a reference of Courses
         // now we will be getting the data from the same reference.
-        db.collection("Food-Details").get()
+        db.collection("Food-Details")
+               // .whereEqualTo("uid",userID)
+                .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
