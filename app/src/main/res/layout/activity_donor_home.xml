@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_teal"
+    tools:context=".DonorHomeActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="ScrollViewSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNgo"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/teal_700"
+            android:layout_margin="10dp"
+            tools:ignore="KeyboardInaccessibleWidget">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/add"
+                android:layout_marginTop="18dp"
+                tools:ignore="ContentDescription"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="135dp"
+                android:text="@string/view_Ngo_Requests"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDonor"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/teal_700"
+            android:layout_margin="10dp"
+            tools:ignore="KeyboardInaccessibleWidget">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/donate"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="135dp"
+                android:text="@string/Donate_Food"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView >

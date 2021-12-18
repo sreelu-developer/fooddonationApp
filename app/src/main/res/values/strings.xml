@@ -16,6 +16,9 @@
     <string name="request">Create Request</string>
     <string name="view_Status">View Request</string>
     <string name="create_new">Not Registered! Click here to Register</string>
+    <string name="view_Ngo_Requests">Ngo Requests</string>
+    <string name="Donate_Food">Donote Food</string>
+    <string name="view_Donor_Requests">Donor Requests</string>
     <string-array name="user_array">
         <item>NGO</item>
         <item>DONOR</item>

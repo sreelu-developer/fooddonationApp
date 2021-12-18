@@ -13,6 +13,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
         <activity
+            android:name=".ViewStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateStatusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NgoRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NgoContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonorRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonorDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonorContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DonorHomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VolunteerHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewFoodRequest"
             android:exported="false" />
         <activity
