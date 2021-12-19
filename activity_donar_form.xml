@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_teal">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".DonorRegActivity">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/donor_form"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:layout_margin="20dp"/>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <EditText
+                android:id="@+id/NameofNgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/NameofNgo"
+                android:textSize="20sp"
+
+                android:inputType="textNoSuggestions"
+                android:background="@android:color/transparent"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:importantForAutofill="no"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/packetError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black">
+
+            <EditText
+                android:id="@+id/Food_Packets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/no_of_packets"
+                android:textSize="20sp"
+
+                android:inputType="number"
+                android:background="@android:color/transparent"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:importantForAutofill="no"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addressError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black">
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/Address"
+            android:textSize="20sp"
+
+            android:inputType="textNoSuggestions"
+            android:background="@android:color/transparent"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:importantForAutofill="no"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_rounded"
+            android:text="@string/location"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/dateerror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black">
+            <EditText
+                android:id="@+id/Fdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/date"
+                android:textSize="20sp"
+                android:maxLength="13"
+                android:background="@android:color/transparent"
+                android:inputType="datetime"
+                android:focusable="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:importantForAutofill="no"/>
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/timeError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:hintAnimationEnabled="true"
+            android:textColorHint="@color/black"
+            app:hintTextColor="@color/black"
+            app:boxStrokeColor="@color/black">
+            <EditText
+                android:id="@+id/Ftime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/time"
+                android:textSize="20sp"
+                android:maxLength="13"
+                android:background="@android:color/transparent"
+                android:inputType="datetime"
+                android:focusable="false"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:importantForAutofill="no"/>
+            <!--<Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/editText1"
+                android:layout_marginLeft="120dp"
+                android:text="Set Time" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/button1"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="100dp"
+                android:textStyle="bold"
+                android:textSize="18dp"/>-->
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/submitbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_rounded"
+            android:text="@string/submit"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
